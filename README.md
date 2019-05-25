@@ -3,10 +3,14 @@ Example site containing at least 3 pages using the developed JS library
 
 ### Prerequisites
 
-[Install node](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions-enterprise-linux-fedora-and-snap-packages)
+[Install npm](https://www.npmjs.com/get-npm)
 
 ### Running server
 
 ```
-node server.js
+npm start
 ```
+
+### accessing site
+
+[localhost:5000](http://localhost:5000/)
