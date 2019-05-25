@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light"">
+
+    <a class="navbar-brand" href="#">ICasei</a>
+  
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">Contato</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about">Sobre</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="#track">Rastreamento</a>
+        </li>
+    </ul>
+  </nav>
+
+  <!----------------------------------------------------------------------->
+
+  <!-- Begin page content -->
+  <div class="container">
+    <div class="content" id="contact">
+      <div class="page-header">
+        <h1>Contato</h1>
+      </div>
+      <div class="container">
+        <form id="contactForm" action=" ">
+          <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary" onclick="submitContactForm()">Submit</button>
+
+        </form>
+      </div>
+    </div>
+
+    <!----------------------------------------------------------------------->
+
+    <div class="content" id="about">
+      <div class="page-header">
+        <h1>Sobre</h1>
+      </div>
+      <p>This is some content for the about page.</p>
+    </div>
+
+    <!----------------------------------------------------------------------->
+
+    <div class="content" id="track">
+      <div class="page-header">
+        <h1>Rastreamento</h1>
+      </div>
+      <table id="trackTable" class="display" style="width:100%">
+        <thead>
+          <tr>
+            <th>guid</th>
+            <th>url</th>
+            <th>created.</th>
+          </tr>
+        </thead>
+      </table>
+      <script>
+        $(document).ready(function() {
+          createTrackDataTable();
+        })
+      </script>
+    </div>
+
+  </div>
+  <script>
+    //Call our init function to get things going...
+    app.initialize();
+  </script>
+
+</body>
+</html>
